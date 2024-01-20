@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, url_for, send_from_directory,
 from flask_wtf import FlaskForm
 from wtforms.validators import Email, DataRequired
 from wtforms.fields import StringField, EmailField, TextAreaField, SubmitField
-from flask_bootstrap import Bootstrap5
 import smtplib
 import os
 
@@ -38,20 +37,17 @@ def download():
 
 @app.route("/contacts", methods=["GET", "POST"])
 def contact():
-    contactForm = ContactForm()
-    print("ok")
-    if contactForm.validate_on_submit():
-        print("request successful")
-        user_name = contactForm.name.data
-        user_email = contactForm.email.data
-        user_comment = contactForm.message.data
+    if request.method == "POST":
+        user_name = request.form.get('name')
+        user_email = request.form.get('email')
+        user_comment = request.form.get('comment')
         with smtplib.SMTP("smtp.gmail.com") as connection:
             connection.starttls()
             connection.login(user=my_email, password=my_password)
             connection.sendmail(from_addr=user_email, to_addrs=my_email,
                                 msg=f"Subject:Contact Me.I Love You\n\n I m {user_name}:{user_comment}".encode("utf-8"))
         return redirect(url_for('home'))
-    return render_template("index.html",form=contactForm)
+    return render_template("index.html")
 
 
 # run the program as a script not as an imported module.
