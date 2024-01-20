@@ -9,7 +9,6 @@ import os
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ.get("secret_key")
 # initialize our flask bootstrap with our flask app
-Bootstrap5(app)
 # My Credentials
 my_password = os.environ.get("my_password")
 my_email = os.environ.get("my_email")
