@@ -1,0 +1,217 @@
+{% from 'bootstrap5/form.html' import render_form %}
+
+
+
+
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+  {% include "header.html" %}
+
+    <!-- about section -->
+    <section class="section pt-0" id="about">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="about">
+                <div class="about-img-holder">
+                    <img src="static/assets/imgs/profile_image.jpg" class="about-img" alt="profile image">
+                </div>
+                <div class="about-caption">
+                    <p class="section-subtitle">Wer bin ich ?</p>
+                    <h2 class="section-title mb-3">About Me</h2>
+                    <p>
+                       Ich bin Mouhib Bourannn,bin 19 jahre alt.<br>
+                        ich komme aus Tunesien.<br>
+                        ich mache jetzt eine ausbildung als programierer.<br>
+                        ich lerne jeden tag Python. ich mache viele Website und spielen.
+                        <br>willkommen in mein website.
+                    <button class="btn-rounded btn btn-outline-primary mt-4"> <a href="{{url_for('download')}}">Download CV </a></button>
+                </div>              
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+    <!-- service section -->
+    <section class="section" id="service">
+        <div class="container text-center">
+            <p class="section-subtitle">What I Do ?</p>
+            <h6 class="section-title mb-6">Service</h6>
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="static/assets/imgs/pencil-case.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Web Design</h6>
+                            <p class="subtitle">create a responsive website with bootstrap</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="static/assets/imgs/logo.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Automation App</h6>
+                            <p class="subtitle">create an automation bot for linekdin App and instagram/Facebook/tinder and many more.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="static/assets/imgs/game.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">2d GAME</h6>
+                            <p class="subtitle">I build a 2d Game like ping pong the famous arcade Game.Snake Game</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="static/assets/imgs/analytics.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Data Science and Machine learning</h6>
+                            <p class="subtitle">create a model to predict the price of a particular property or house base on the characteristic of the house.</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end of row -->
+        </div>
+    </section><!-- end of service section -->
+
+    <!-- portfolio section -->
+    <section class="section" id="portfolio">
+        <div class="container text-center">
+            <p class="section-subtitle">What I Did ?</p>
+            <h6 class="section-title mb-6">Portfolio</h6>
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="#" class="portfolio-card">
+                        <img src="static/assets/imgs/snake_game.png" class="portfolio-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Graphical User Interface with Turtle.</h5>
+                                <p class="font-weight-normal">Category: GUI Game</p>
+                            </span>                         
+                        </span>                     
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="portfolio-card">
+                        <img class="portfolio-card-img" src="static/assets/imgs/blog_website.png" class="img-responsive rounded" alt="blog website" height="263">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Web Development</h5>
+                                <p class="font-weight-normal">Category: Web Dev</p>
+                            </span>                         
+                        </span>                         
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="portfolio-card">
+                        <img class="portfolio-card-img" src="static/assets/imgs/black_jack_game.jpg" class="img-responsive rounded" alt="BLACK JACK GAME" height="263">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Web Designing</h5>
+                                <p class="font-weight-normal">Category:pyton foundation.simple text-based version of game</p>
+                            </span>                         
+                        </span>                     
+                    </a>
+                </div>
+
+                 <div class="col-md-4" style="margin-top:10px">
+                    <a href="#" class="portfolio-card">
+                        <img src="static/assets/imgs/instagram_bot.jpg" class="portfolio-card-img" alt="Instagram Bot" height="263">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Web Designing</h5>
+                                <p class="font-weight-normal">Category: Automate browser with selenium webdriver </p>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                  <div class="col-md-4" style="margin-top:10px">
+                    <a href="#" class="portfolio-card">
+                        <img src="static/assets/imgs/price_prediction.jpg" class="portfolio-card-img" alt="price prediction model" height="263">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Data Analysis and machine learning</h5>
+                                <p class="font-weight-normal">Category: Data <sci>  </sci>ence and machine learning</p>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                 <div class="col-md-4" style="margin-top:10px">
+                    <a href="#" class="portfolio-card">
+                        <img src="static/assets/imgs/API.jpg" class="portfolio-card-img" alt="price prediction model" height="263">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Create A Flask RestFull APi for cafee</h5>
+                                <p class="font-weight-normal">Category: Web dev</p>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+
+
+            </div><!-- end of row -->
+        </div><!-- end of container -->
+    </section> <!-- end of portfolio section -->
+
+
+
+
+
+
+
+
+
+        </div><!-- end of container -->
+    </section><!-- end of blog section -->
+
+    <!-- contact section -->
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <p class="section-subtitle">How can you communicate?</p>
+            <h6 class="section-title mb-5">Contact Me</h6>
+            <!-- contact form -->
+
+
+
+            <form action="{{url_for('contact')}}"  method="post" class="contact-form col-md-10 col-lg-8 m-auto" novalidate>
+                  {{ render_form(form) }}
+
+<!--                <div class="form-row">-->
+<!--                    <div class="form-group col-sm-6">-->
+<!--                        <input type="text" size="50"  name="name" class="form-control" placeholder="Your Name" required>-->
+<!--                    </div>-->
+<!--                    <div class="form-group col-sm-6">-->
+<!--                        <input type="email" class="form-control"  name="email" placeholder="Enter Email"requried>-->
+<!--                    </div>-->
+<!--                    <div class="form-group col-sm-12">-->
+<!--                        <textarea name="comment" id="comment" rows="6"    class="form-control" placeholder="Write Something"></textarea>-->
+<!--                    </div>-->
+<!--                    <div class="form-group col-sm-12 mt-3">-->
+<!--                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">-->
+<!--                    </div>-->
+<!--                </div>-->
+            </form><!-- end of contact form -->
+        </div><!-- end of container -->
+    </section><!-- end of contact section -->
+
+ {% include "footer.html" %}
+	
+	<!-- core  -->
+    <script src="static/assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="static/assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="static/assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="static/assets/js/meyawo.js"></script>
+
+</body>
+</html>
